@@ -20,7 +20,7 @@ The agent learns a robust running policy with a custom reward wrapper that disco
 - Gradient clipping for stability
 
 ## Demo
-https://github.com/highcansavci/halfcheetah-sac/blob/master/videos/20260519_151402/sac_eval-episode-0.mp4
+https://github.com/user-attachments/assets/2ce7be22-1c3c-4d59-8a4f-21555e50916a
 
 ## Repository Structure
 halfcheetah-sac/  
