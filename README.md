@@ -20,18 +20,19 @@ The agent learns a robust running policy with a custom reward wrapper that disco
 - Gradient clipping for stability
 
 ## Repository Structure
-halfcheetah-sac/
-├── config/
-│   └── sac.yaml                 # Hyperparameters
-├── training/
-│   ├── train.py                 # Main training script
-│   ├── eval.py                  # Evaluation + video recording
-│   ├── sac_reward_wrapper.py    # UprightWrapper
-│   ├── measure_height.py        # Utility to inspect environment
-│   └── init.py
-├── models/                      # (generated) saved checkpoints
-├── videos/                      # (generated) evaluation recordings
-└── .gitignore
+halfcheetah-sac/  
+├── config/  
+│   └── sac.yaml                 # Hyperparameters  
+├── training/  
+│   ├── train.py                 # Main training script  
+│   ├── eval.py                  # Evaluation + video recording  
+│   ├── sac_reward_wrapper.py    # UprightWrapper  
+│   ├── measure_height.py        # Utility to inspect environment  
+│   └── init.py  
+├── models/                      # (generated) saved checkpoints  
+├── videos/                      # (generated) evaluation recordings  
+└── .gitignore  
+
 
 ## Installation
 
@@ -53,23 +54,23 @@ Training progress (episode reward, Avg100, losses, α) is printed to console.
 Default config runs for 100,000 episodes (very long — adjust in config/sac.yaml).
 
 ## Evaluation
-Bashcd training
+cd training
 python eval.py --help
 Examples:
 
 ## Evaluate latest model (deterministic, with GUI)
 python eval.py
 
-# Record videos
+## Record videos
 python eval.py --record
 
-# Stochastic policy, no render, 20 episodes
+## Stochastic policy, no render, 20 episodes
 python eval.py --stochastic --no-render --episodes 20
 
-# Specific model
+## Specific model
 python eval.py --model models/sac_ep2000
 Configuration (config/sac.yaml)
-YAMLenv:
+env:
   name: HalfCheetahBulletEnv-v0
 
 agent:
