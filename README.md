@@ -90,7 +90,7 @@ python eval.py --stochastic --no-render --episodes 20
 python eval.py --model models/sac_ep2000
 ```
 
-Configuration (config/sac.yaml)
+## Configuration
 ```yaml
 env:
   name: HalfCheetahBulletEnv-v0
