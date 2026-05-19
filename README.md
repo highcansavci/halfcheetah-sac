@@ -19,6 +19,9 @@ The agent learns a robust running policy with a custom reward wrapper that disco
 - Training + evaluation + video recording scripts
 - Gradient clipping for stability
 
+## Demo
+https://github.com/highcansavci/halfcheetah-sac/blob/master/videos/20260519_151402/sac_eval-episode-0.mp4
+
 ## Repository Structure
 halfcheetah-sac/  
 ├── config/  
