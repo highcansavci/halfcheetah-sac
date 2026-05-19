@@ -1,0 +1,15 @@
+env:
+  name: HalfCheetahBulletEnv-v0
+agent:
+  hidden_size: 256
+  actor_lr:    0.0003
+  critic_lr:   0.0003
+  alpha_lr:    0.0003
+  gamma:       0.99
+  tau:         0.005
+  batch_size:  256
+  buffer_size: 1000000
+  warmup_steps: 10000
+  update_every: 1
+  reward_scale: 5.0 
+  num_episodes: 100000
