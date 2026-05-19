@@ -43,36 +43,55 @@ halfcheetah-sac/
    ```bash
    git clone https://github.com/highcansavci/halfcheetah-sac.git
    cd halfcheetah-sac
+   ```
 
-Create a virtual environment (recommended) and install dependencies:Bashpip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu  # or cuda if you have GPU
-pip install gymnasium pybullet pybullet-envs-gymnasium numpy pyyaml
+2. Create a virtual environment (recommended) and install dependencies:
+   ```bash
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu  # or cuda if you have GPU
+   pip install gymnasium pybullet pybullet-envs-gymnasium numpy pyyaml
+   ```
 
 Note: The code hardcodes a Windows path for pybullet_data. You may need to adjust or remove the override in train.py and eval.py for your system.
+
 ## Training
+```bash
 cd training
 python train.py
+```
 
 Models are saved every 200 episodes to models/sac_epXXXX/
 Training progress (episode reward, Avg100, losses, α) is printed to console.
 Default config runs for 100,000 episodes (very long — adjust in config/sac.yaml).
 
 ## Evaluation
+```bash
 cd training
 python eval.py --help
+```
 Examples:
 
 ## Evaluate latest model (deterministic, with GUI)
+```bash
 python eval.py
+```
 
 ## Record videos
+```bash
 python eval.py --record
+```
 
 ## Stochastic policy, no render, 20 episodes
+```bash
 python eval.py --stochastic --no-render --episodes 20
+```
 
 ## Specific model
+```bash
 python eval.py --model models/sac_ep2000
+```
+
 Configuration (config/sac.yaml)
+```yaml
 env:
   name: HalfCheetahBulletEnv-v0
 
@@ -89,6 +108,7 @@ agent:
   update_every: 1
   reward_scale: 5.0
   num_episodes: 100000
+```
 Feel free to tweak these values.
 
 ## Notes
